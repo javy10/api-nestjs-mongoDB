@@ -11,7 +11,7 @@ import { VueloModule } from './vuelo/vuelo.module';
 import { ReservacionModule } from './reservacion/reservacion.module';
 
 
-const cluster = 'mongodb+srv://belmont:belmont983@cluster0.sgzgg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const cluster = 'mongodb+srv://belmont:belmont983@cluster0.sgzgg.mongodb.net/aerolinea?retryWrites=true&w=majority';
 @Module({
   imports: [ClientesModule, OrigenModule, DestinoModule, ItinerarioModule, VueloModule, ReservacionModule, MongooseModule.forRoot(cluster)],
   controllers: [AppController],
