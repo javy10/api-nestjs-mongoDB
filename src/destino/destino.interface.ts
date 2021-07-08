@@ -1,6 +1,6 @@
 export interface Destino {
-    id?: string;
-  aeropuerto: string;
-  ciudad: string;
-  nCiudad: number;
+    Id?: string;
+    Aeropuerto: string;
+    Ciudad: string;
+    Codciudad: number;
 }
