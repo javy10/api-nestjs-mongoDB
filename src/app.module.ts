@@ -11,7 +11,7 @@ import { VueloModule } from './vuelo/vuelo.module';
 import { ReservacionModule } from './reservacion/reservacion.module';
 
 
-const cluster = '';
+const cluster = 'mongodb+srv://admin:<ryuk>@cluster0.fttr9.mongodb.net/aerolinea?retryWrites=true&w=majority';
 @Module({
   imports: [ClientesModule, OrigenModule, DestinoModule, ItinerarioModule, VueloModule, ReservacionModule, MongooseModule.forRoot(cluster)],
   controllers: [AppController],
