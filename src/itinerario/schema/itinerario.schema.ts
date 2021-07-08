@@ -1,6 +1,5 @@
 import { time } from 'console';
 import *as mongoose from 'mongoose';
-//import { OneToMany } from 'typeorm';
 import { destinoSchema } from 'src/destino/schema/destino.schema';
 
 export const itinerarioSchema = new mongoose.Schema({
