@@ -1,12 +1,11 @@
 import { time } from 'console';
-import { Schema } from 'mongoose';
-//import { OneToMany } from 'typeorm'
+import *as mongoose from 'mongoose';
+//import { OneToMany } from 'typeorm';
 import { destinoSchema } from 'src/destino/schema/destino.schema';
 
-export const itinerarioSchema = new Schema({
-  Id: { type: Schema.Types.ObjectId },
+export const itinerarioSchema = new mongoose.Schema({
   Fecha: Date,
   Hora: String,
-  Destino_id_: { type: Schema.Types.ObjectId },
-  Origen_id: { type: Schema.Types.ObjectId }
+  Destino_id_: { type: mongoose.Types.ObjectId },
+  Origen_id: { type: mongoose.Types.ObjectId }
 });
