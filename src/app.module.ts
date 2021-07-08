@@ -7,10 +7,13 @@ import { OrigenModule } from './origen/origen.module';
 import { DestinoModule } from './destino/destino.module';
 import { ItinerarioController } from './itinerario/itinerario.controller';
 import { ItinerarioModule } from './itinerario/itinerario.module';
+import { VueloModule } from './vuelo/vuelo.module';
+import { ReservacionModule } from './reservacion/reservacion.module';
+
 
 const cluster = '';
 @Module({
-  imports: [ClientesModule, OrigenModule, MongooseModule.forRoot(cluster), DestinoModule, ItinerarioModule],
+  imports: [ClientesModule, OrigenModule, MongooseModule.forRoot(cluster), DestinoModule, ItinerarioModule, VueloModule, ReservacionModule],
   controllers: [AppController, ItinerarioController],
   providers: [AppService],
 })
