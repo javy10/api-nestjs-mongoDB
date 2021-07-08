@@ -27,5 +27,4 @@ export class DestinoService {
   async delete(id: string): Promise<Destino> {
     return await this.model.findByIdAndDelete(id).exec();
   }
-  v;
 }
