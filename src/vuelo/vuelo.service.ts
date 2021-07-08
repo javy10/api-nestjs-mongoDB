@@ -6,7 +6,7 @@ import { Vuelo } from './vuelo.interface';
 @Injectable()
 export class VueloService {
     constructor(
-        @InjectModel('clientes') private readonly model: Model<Vuelo>,
+        @InjectModel('vuelo') private readonly model: Model<Vuelo>,
       ) {}
 
     async findAll(): Promise<Vuelo[]> {
