@@ -16,7 +16,7 @@ export class OrigenService {
   }
 
   async create(create: Origen): Promise<Origen> {
-    return await new this.model(create).save();
+    return await new this.model({ id: new Types.ObjectId(), ...create }).save();
   }
 
   async update(id: string, update: Origen): Promise<Origen> {
