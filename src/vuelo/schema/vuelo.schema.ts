@@ -1,7 +1,6 @@
-import { Schema } from 'mongoose';
-export const vueloSchema = new Schema({
-  id: { type: Schema.Types.ObjectId },
-  itinerario_id: { type: Schema.Types.ObjectId},
+import *as mongoose from 'mongoose';
+export const vueloSchema = new mongoose.Schema({
+  itinerario_id: { type: mongoose.Types.ObjectId},
   capacidad: Number,
   nVuelo: String
 });

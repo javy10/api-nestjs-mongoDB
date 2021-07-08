@@ -1,8 +1,7 @@
-import { Schema } from 'mongoose';
-export const ReservacionSchema = new Schema({
-  id: { type: Schema.Types.ObjectId },
-  cliente_id: { type: Schema.Types.ObjectId},
-  vuelo_id: { type: Schema.Types.ObjectId},
+import *as mongoose from 'mongoose';
+export const ReservacionSchema = new mongoose.Schema({
+  cliente_id: { type: mongoose.Types.ObjectId},
+  vuelo_id: { type: mongoose.Types.ObjectId},
   clase: String,
   aciento: String,
   precio: Number,
