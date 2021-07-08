@@ -1,6 +1,5 @@
-import { Schema } from 'mongoose';
-export const clienteSchema = new Schema({
-  id: { type: Schema.Types.ObjectId },
+import * as mongoose from 'mongoose';
+export const clienteSchema = new mongoose.Schema({
   nombre: String,
   edad: Number,
   telefono: String,

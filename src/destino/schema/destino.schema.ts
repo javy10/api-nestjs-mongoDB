@@ -1,7 +1,7 @@
-import { Schema } from 'mongoose';
+import * as mongoose from 'mongoose';
 
 
-export const destinoSchema = new Schema({
+export const destinoSchema = new mongoose.Schema({
   Aeropuerto: String,
   Ciudad: String,
   Codciudad: Number,

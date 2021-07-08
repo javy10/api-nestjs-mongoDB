@@ -1,6 +1,5 @@
-import { Schema } from 'mongoose';
-export const origenSchema = new Schema({
-  id: { type: Schema.Types.ObjectId },
+import * as mongoose from 'mongoose';
+export const origenSchema = new mongoose.Schema({
   aeropuerto: String,
   ciudad: String,
   nCiudad: Number,
