@@ -14,7 +14,7 @@ import { ReservacionModule } from './reservacion/reservacion.module';
 const cluster = '';
 @Module({
   imports: [ClientesModule, OrigenModule, DestinoModule, ItinerarioModule, VueloModule, ReservacionModule, MongooseModule.forRoot(cluster)],
-  controllers: [AppController, ItinerarioController],
+  controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
