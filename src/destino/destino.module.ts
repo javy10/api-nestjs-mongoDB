@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { DestinoController } from './destino.controller';
 import { DestinoService } from './destino.service';
-import { destinoSchema } from './schema/origen.schema';
+import { destinoSchema } from './schema/destino.schema';
 
 @Module({
   controllers: [DestinoController],
