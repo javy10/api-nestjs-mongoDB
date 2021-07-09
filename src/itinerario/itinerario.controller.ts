@@ -27,7 +27,7 @@ export class ItinerarioController {
 
   @Post()
   async create(@Body() create: Itinerario) {
-    return await this.service.create(create);
+    return await this.service.create({Fecha: new Date(create.Fecha.toString()), ...create});
   }
 
   @Put(':id')

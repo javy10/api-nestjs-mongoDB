@@ -16,10 +16,12 @@ export class OrigenService {
   }
 
   async create(create: Origen): Promise<Origen> {
+    return await new this.model(create).save();
+  }
+  /*async create(create: Origen): Promise<Origen> {
     const nuevo = new this.model({create});
     return await nuevo.save();
-
-  }
+  }*/
 
   async update(id: string, update: Origen): Promise<Origen> {
     return await this.model.findByIdAndUpdate(id, update).exec();
