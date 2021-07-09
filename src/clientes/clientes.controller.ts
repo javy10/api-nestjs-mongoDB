@@ -38,9 +38,10 @@ export class ClientesController {
   }
 
   @Put(':id')
-  async update(@Param('id') id: string, @Body() updateClient: Clientes) {
+  async update(@Param('id') id: string, @Body() updateClient: Cliente) {
     return await this.service.update(id, updateClient);
   }
+  
 
   @Delete(':id')
   async delete(@Param('id') id: string) {
