@@ -16,8 +16,7 @@ export class OrigenService {
   }
 
   async create(create: Origen): Promise<Origen> {
-    const nuevo = new this.model({create});
-    return await nuevo.save();
+    return await new this.model(create).save();
 
   }
 
