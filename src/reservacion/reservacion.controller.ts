@@ -7,9 +7,11 @@ import {
     Post,
     Put,  
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { Reservacion } from './reservacion.interface';
 import { ReservacionService } from './reservacion.service';
 
+@ApiTags('Esta es la documentación para la colección Reservación')
 @Controller('reservacion')
 export class ReservacionController {
     constructor(private readonly service: ReservacionService) {}

@@ -7,9 +7,11 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { Origen } from './origen.interface';
 import { OrigenService } from './origen.service';
 
+@ApiTags('Esta es la documentación para la colección Origen')
 @Controller('origen')
 export class OrigenController {
   constructor(private readonly service: OrigenService) {}

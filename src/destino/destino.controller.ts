@@ -7,9 +7,11 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { Destino } from './destino.interface';
 import { DestinoService } from './destino.service';
 
+@ApiTags('Esta es la documentación para la colección Destinos')
 @Controller('destino')
 export class DestinoController {
   constructor(private readonly service: DestinoService) {}

@@ -7,9 +7,11 @@ import {
     Post,
     Put,
  } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { Itinerario } from './itinerario.interface';
 import { ItinerarioService } from './itinerario.service';
 
+@ApiTags('Esta es la documentación para la colección Itinerario')
 @Controller('itinerario')
 export class ItinerarioController {
 
