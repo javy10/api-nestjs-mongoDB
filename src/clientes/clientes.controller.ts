@@ -8,6 +8,7 @@ import {
   Put,
 } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
+import { Cliente } from './cliente.dto';
 import { Clientes } from './clientes.interface';
 import { ClientesService } from './clientes.service';
 
@@ -29,6 +30,11 @@ export class ClientesController {
   @Post()
   async create(@Body() createClient: Clientes) {
     return await this.service.create(createClient);
+  }
+  // Prueba de post en la documentacion
+  @Post()
+  async createSwagger(@Body() createClient: Cliente) {
+    return await this.service.createswagger(createClient);
   }
 
   @Put(':id')
