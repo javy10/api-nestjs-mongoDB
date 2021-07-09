@@ -1,4 +1,6 @@
 import *as mongoose from 'mongoose';
+import { Decimal128 } from "mongoose";
+
 export const ReservacionSchema = new mongoose.Schema({
   cliente_id: { type: mongoose.Types.ObjectId},
   vuelo_id: { type: mongoose.Types.ObjectId},

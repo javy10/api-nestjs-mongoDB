@@ -10,6 +10,7 @@ import {
 import { ApiTags } from '@nestjs/swagger';
 import { Reservacion } from './reservacion.interface';
 import { ReservacionService } from './reservacion.service';
+import { Reservacions } from './reservacions.dto';
 
 @ApiTags('Esta es la documentación para la colección Reservación')
 @Controller('reservacion')
@@ -27,12 +28,12 @@ export class ReservacionController {
   }
 
   @Post()
-  async create(@Body() createReservacion: Reservacion) {
+  async create(@Body() createReservacion: Reservacions) {
     return await this.service.create(createReservacion);
   }
 
   @Put(':id')
-  async update(@Param('id') id: string, @Body() updateReservacion: Reservacion) {
+  async update(@Param('id') id: string, @Body() updateReservacion: Reservacions) {
     return await this.service.update(id, updateReservacion);
   }
 

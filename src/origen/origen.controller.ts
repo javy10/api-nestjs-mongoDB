@@ -10,6 +10,7 @@ import {
 import { ApiTags } from '@nestjs/swagger';
 import { Origen } from './origen.interface';
 import { OrigenService } from './origen.service';
+import { Origens } from './origenes.dto';
 
 @ApiTags('Esta es la documentación para la colección Origen')
 @Controller('origen')
@@ -27,12 +28,12 @@ export class OrigenController {
   }
 
   @Post()
-  async create(@Body() create: Origen) {
+  async create(@Body() create: Origens) {
     return await this.service.create(create);
   }
 
   @Put(':id')
-  async update(@Param('id') id: string, @Body() update: Origen) {
+  async update(@Param('id') id: string, @Body() update: Origens) {
     return await this.service.update(id, update);
   }
 

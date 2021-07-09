@@ -10,6 +10,7 @@ import {
 import { ApiTags } from '@nestjs/swagger';
 import { Vuelo } from './vuelo.interface';
 import { VueloService } from './vuelo.service';
+import { Vuelos } from './vuelos.dto';
 
 @ApiTags('Esta es la documentación para la colección Vuelo')
 @Controller('vuelo')
@@ -27,12 +28,12 @@ export class VueloController {
   }
 
   @Post()
-  async create(@Body() createVuelo: Vuelo) {
+  async create(@Body() createVuelo: Vuelos) {
     return await this.service.create(createVuelo);
   }
 
   @Put(':id')
-  async update(@Param('id') id: string, @Body() updateVuelo: Vuelo) {
+  async update(@Param('id') id: string, @Body() updateVuelo: Vuelos) {
     return await this.service.update(id, updateVuelo);
   }
 

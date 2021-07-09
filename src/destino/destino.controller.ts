@@ -9,6 +9,7 @@ import {
 } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { Destino } from './destino.interface';
+import { Destinos } from './destinos.dto';
 import { DestinoService } from './destino.service';
 
 @ApiTags('Esta es la documentación para la colección Destinos')
@@ -27,12 +28,12 @@ export class DestinoController {
   }
 
   @Post()
-  async create(@Body() create: Destino) {
+  async create(@Body() create: Destinos) {
     return await this.service.create(create);
   }
 
   @Put(':id')
-  async update(@Param('id') id: string, @Body() update: Destino) {
+  async update(@Param('id') id: string, @Body() update: Destinos) {
     return await this.service.update(id, update);
   }
 

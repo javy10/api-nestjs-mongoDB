@@ -4,7 +4,7 @@ import { destinoSchema } from 'src/destino/schema/destino.schema';
 import { origenSchema } from 'src/origen/schema/origen.schema';
 
 export const itinerarioSchema = new mongoose.Schema({
-  Fecha: Date,
+  Fecha: String,
   Hora: String,
   Destino_id: { type: mongoose.Types.ObjectId },
   Origen_id: { type: mongoose.Types.ObjectId }

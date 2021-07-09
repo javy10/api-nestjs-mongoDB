@@ -10,6 +10,7 @@ import {
 import { ApiTags } from '@nestjs/swagger';
 import { Itinerario } from './itinerario.interface';
 import { ItinerarioService } from './itinerario.service';
+import { Itinerarios } from './itinerarios.dto';
 
 @ApiTags('Esta es la documentación para la colección Itinerario')
 @Controller('itinerario')
@@ -28,12 +29,12 @@ export class ItinerarioController {
   }
 
   @Post()
-  async create(@Body() create: Itinerario) {
+  async create(@Body() create: Itinerarios) {
     return await this.service.create({Fecha: new Date(create.Fecha.toString()), ...create});
   }
 
   @Put(':id')
-  async update(@Param('id') id: string, @Body() update: Itinerario) {
+  async update(@Param('id') id: string, @Body() update: Itinerarios) {
     return await this.service.update(id, update);
   }
 
