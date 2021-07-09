@@ -6,7 +6,6 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   // Documentacion
-
   const config = new DocumentBuilder()
   .setTitle('API PROYECTO FINAL')
   .setDescription('API del proyecto final')
@@ -18,7 +17,6 @@ async function bootstrap() {
   SwaggerModule.setup('documentacion', app, document);
 
 // Documentacion
-
-  await app.listen(3000);
+  await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
