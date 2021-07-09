@@ -11,7 +11,7 @@ async function bootstrap() {
   .setTitle('API PROYECTO FINAL')
   .setDescription('API del proyecto final')
   .setVersion('1.0')
-  .addTag('Clientes')
+  //.addTag('Clientes')
   .build();
 
   const document = SwaggerModule.createDocument(app, config);

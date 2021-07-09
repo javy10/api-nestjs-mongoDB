@@ -7,13 +7,15 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { Clientes } from './clientes.interface';
 import { ClientesService } from './clientes.service';
 
+@ApiTags('Esta es la documentación para la colección Clientes')
 @Controller('clientes')
 export class ClientesController {
   constructor(private readonly service: ClientesService) {}
-
+  
   @Get()
   async findAll() {
     return await this.service.findAll();
