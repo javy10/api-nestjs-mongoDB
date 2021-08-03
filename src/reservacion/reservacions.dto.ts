@@ -1,5 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { Decimal128 } from "mongoose";
+import { Document } from "mongoose";
 
 
 export class Reservacions {
